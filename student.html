@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Registeration</title>
+	<script type="text/javascript">
+		
+		function save() {
+			var name = document.getElementById('name').value;
+			var phone = document.getElementById('phone').value;
+			var email = document.getElementById('email').value;
+			//alert(name + phone + email);
+
+			var html =  '';
+
+			//html = "<tr><td>"+name+"</td></tr>"
+			html = `<tr>
+			<td>${name}</td>
+			<td>${phone}</td>
+			<td>${email}</td>
+
+			</tr>`;
+
+			document.getElementById('tbody').innerHTML = html;
+		}
+
+
+	</script>
+</head>
+<body>
+
+	<label for="name">Name</label>
+	<input type="text" name="name" id="name">
+	<br><br>
+	<label for="phone">Phone</label>
+	<input type="number" name="phone" id="phone">
+	<br><br>
+	<label for="email">Email</label>
+	<input type="email name="email" id="email">
+	<br><br>
+
+	<button onclick="save()">Save</button>
+	<br><br>
+
+	<table border="1" cellspacing="0" cellpadding="20">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+			
+
+		</tbody>
+	</table>
+
+
+</body>
+</html>

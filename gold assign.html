@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gold</title>
+
+
+</head>
+<body>
+<form name="myForm" action=""> 
+<label for="gram">Gram:</label>
+<input type="number" name="gram" id="gram" required="">
+<br><br><br>
+<label for="price">Price:</label>
+<input type="number" name="price" id="price" readonly="" value="1215000">
+<br><br>
+<input type="button" name="calculate" onclick="return goldcalculate()" value="calculate">
+<br><br>
+<label for="kyats">Kyats:</label>
+<input type="number" name="kyats" id="kyats">
+<br><br>
+<label for="pae">Pae:</label>
+<input type="number" name="pae" id="pae">
+<br><br>
+<label for="ywae">Ywae:</label>
+<input type="number" name="ywae" id="ywae">
+<br><br>
+<label for="total">Total</label>
+<input type="number" name="total" id="total">
+
+</form>
+<script type="text/javascript">
+		var gold=prompt("Enter gram");
+		var gold=parseInt(gold);
+		document.getElementById('gram').value=gold;
+		var price = document.myForm.price.value;
+		var price = parseInt(price);
+		function goldcalculate() {
+
+			var num1 = gold/16.6;
+			var kyats = Math.floor(num1);
+			document.getElementById("kyats").value =kyats;
+
+			var pae = num1 - kyats;
+			var pae1 = pae *16;
+			var pae = Math.floor(pae1);
+			document.getElementById("pae").value= pae;
+
+			var ywae = pae1 - pae;
+			var ywae1 = ywae * 8;
+			var ywae = Math.floor(ywae1);
+			document.getElementById("ywae").value = ywae;
+
+			var total = ((Number(ywae) / 8)+(Number (pae )/ 16)+ Number(kyats))* Number(price);
+			document.getElementById("total").value = parseInt(total);
+		}
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom</title>
+	<script type="text/javascript">
+		
+		function getData() {
+
+document.getElementById('data').innerHTML="Hello Dom";
+		}
+		function imgChange() {
+			document.getElementById('myImg').setAttribute('width',200);
+		}
+		function imgChange() {
+			document.getElementById('myImg').setAttribute('width',200);
+
+		}
+		function imgDef() {
+			document.getElementById('myImg').setAttribute('width',300);
+		}
+		function cssChange(){
+			document.getElementById('css').style.color="red"
+				}
+		/*function classChange() {
+			var x =
+			}*/
+
+	</script>
+
+
+</head>
+<body>
+	<button onclick="getData()">Click</button>
+	<p id="data"> Mic check 1,2 !</p>
+	<img src="a.png" id="myImg" onmouseover="imgChange()" onmouseout='imgDef()'>
+	<br><br>
+
+	<!-- <button onclick="classChange()">ClassClick</button> -->
+	<!-- <p class="cls">Hello!</p> -->
+	<!-- <p class="cls">Testing ..</p> -->
+	<!-- <p class="cls">Javascript</p> -->
+	<button onclick="cssChange()">Css</button>
+	<p id="css">Hello guys !</p>
+
+
+</body>
+</html>

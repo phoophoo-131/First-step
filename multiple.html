@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>ALI</title>
+	<script type="text/javascript">
+		function ali() {
+
+			var number=parseInt(document.myForm.number.value);
+
+			var i;
+			for(i=1; i<=12; i++){
+				var result=number*i;
+				document.write("<h1>"+number+"x"+i+"="+result+"</h1>");
+			}
+		}
+
+	</script>
+</head>
+<body>
+<h1>ALI</h1>
+<form name="myForm">
+	<label for="number">Enter a number:</label><br>
+	<input type="number" name="number" id="number">
+	<br>
+	<button onclick="ali()">Calculate</button>
+</form>
+
+</body>
+</html>
